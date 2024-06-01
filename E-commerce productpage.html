@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My E-commerce Site</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Contact</a>
+            <a href="#">Cart</a>
+        </nav>
+    </header>
+    <main>
+        <section class="product">
+            <div class="product-image">
+                <img src="product.jpg" alt="Product Image">
+            </div>
+            <div class="product-details">
+                <h2>Product Name</h2>
+                <p class="price">$99.99</p>
+                <p class="description">This is a great product that you'll love to use every day.</p>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+                <button id="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My E-commerce Site</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+CSS (styles.css)
+css
+Copy code
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.product {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    max-width: 800px;
+    width: 100%;
+}
+
+.product-image img {
+    max-width: 300px;
+    margin-right: 2rem;
+}
+
+.product-details {
+    max-width: 500px;
+}
+
+.price {
+    color: #b12704;
+    font-size: 1.5rem;
+}
+
+button {
+    background-color: #f0c14b;
+    border: 1px solid #a88734;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e2a700;
+}
+JavaScript (script.js)
+javascript
+Copy code
+document.getElementById('add-to-cart').addEventListener('click', function() {
+    const quantity = document.getElementById('quantity').value;
+    alert(`Added ${quantity} item(s) to your cart.`);
+});
